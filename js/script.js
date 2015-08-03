@@ -1,6 +1,6 @@
 var margin = {top: 20, right: 20, bottom: 20, left: 19},
   width = 600 - margin.right - margin.left, // width
-  height = 300 - margin.top - margin.bottom, // height
+  height = 325 - margin.top - margin.bottom, // height
   cellSize = 50,
   year = 2014,
   day = d3.time.format("%w"),
@@ -20,6 +20,7 @@ var svg = d3.select("#calendar").selectAll("svg")
   .append("g")
   .attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
 
+
 var rect = svg.selectAll("rect.day")
   .data(function(d, i) { return d3.time.days(d, new Date(d.getFullYear(), d.getMonth()+1, 1)); })
   .enter().append("rect")
@@ -30,8 +31,11 @@ var rect = svg.selectAll("rect.day")
   .attr("y", function(d) { return (week(d) - week(new Date(d.getFullYear(),d.getMonth(),1))) * cellSize; })
   .datum(format)
   .on("click", function(d){
+    d3.select(".active").attr("class", "day");
     d3.select(".info").remove(); 
-    console.log(d);      
+    console.log(d);    
+    console.log(this)
+    d3.select(this).attr("class", "active")  
     d3.select("#info").append("p").attr("class", "info").text(d);});
 
 

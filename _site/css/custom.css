@@ -6,3 +6,8 @@
 	fill: #989595;
 	stroke: #FFFFFF;
 }
+
+.active {
+	fill: #DA0D4A;
+	stroke: #DA0D4A;
+}
