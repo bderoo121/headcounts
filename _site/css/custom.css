@@ -11,3 +11,7 @@
 	fill: #DA0D4A;
 	stroke: #DA0D4A;
 }
+
+.info {
+	position: fixed;
+}

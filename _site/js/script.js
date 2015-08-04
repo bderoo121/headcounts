@@ -10,6 +10,8 @@ var margin = {top: 20, right: 20, bottom: 20, left: 19},
   monthName = d3.time.format("%B"),
   months= d3.time.months(new Date(year, 0), new Date(year + 1, 0));
 
+
+
 var svg = d3.select("#calendar").selectAll("svg")
   .data(months)
   .enter().append("svg")
