@@ -12,6 +12,23 @@
 	stroke: #DA0D4A;
 }
 
-.info {
+#chart rect {
+  fill: steelblue;
+}
+
+#chart text {
+  fill: black;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+#fixed {
 	position: fixed;
 }
+
+
+/*
+#info,
+#chart {
+	position: fixed;
+} */ 
