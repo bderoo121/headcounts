@@ -88,7 +88,7 @@ chart.append("g")
 
 chart.append("g")
     .attr("class", "y axis")
-    .attr("transform", "translate(50, -20)")
+    .attr("transform", "translate(60, -20)")
     .call(yAxis);
 
 
